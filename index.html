@@ -30,27 +30,70 @@
                 <button class="text-sm font-normal text-dark-gray-800 hover:text-dark-gray-900">Log In</button>
                 <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
             </div>
-            <button class="md:hidden" id="mobile-menu-toggle">
-                <svg xmls="https://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor" class="h6 w-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M4 6h16M4 12h16m-7 6h7" >
-
-                    </path>
+            <button class="md:hidden p-4" id="mobile-menu-toggle">.
+                <svg 
+                width="10px" 
+                height="10px" 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                class="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_429_11066)">
+                        <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" 
+                        stroke="#292929" stroke-width="2.5" 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round"/>
+                    </g>
+                    <defs>
+                        <clipPath 
+                        id="clip0_429_11066"
+                        >
+                            <rect 
+                            width="24" 
+                            height="24" 
+                            fill="white" 
+                            transform="translate(0 0.000915527)"
+                            />
+                        </clipPath>
+                    </defs>
                 </svg>
             </button>
-            <div class="absolute flex md:hidden flex-col items-start shadow-main justify center w-full gap-3 overflow-hidden bg-white max-h-screen top-full"
+            <div 
+            class="absolute flex md:hidden flex-col items-start shadow-main justify center w-full gap-3 overflow-hidden bg-white max-h-screen top-full"
             id="mobile-menu"
             >
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Products</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Features</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Get Started</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Contact</a>
-                <button class="flex items-center px-4 py-2 text-sm font-normal text-black">Log In</button>
-                <button class="flex items-center px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+                <a 
+                href="javascript:void(0)" 
+                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Products</a>
+                <a 
+                href="javascript:void(0)" 
+                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
+                Features
+            </a>
+                <a 
+                href="javascript:void(0)" 
+                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
+                Get Started
+            </a>
+                <a 
+                href="javascript:void(0)" 
+                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
+                Contact
+            </a>
+                <button 
+                class="flex items-center px-4 py-2 text-sm font-normal text-black">
+                Log In
+            </button>
+                <button 
+                class="flex items-center px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">
+                Sign Up
+            </button>
             </div>
 
         </div>
 
-        <div class="w-full">
+        <div 
+        class="w-full">
         </div>
         <div class="container mx-auto">
         </div>
@@ -65,9 +108,66 @@
 <div class="w-full bg-green-500">
 <!-- Full-width footer container with green background -->
 </div>
+
+<!-- Component 2: Hero and Endorsements -->
+<!-- Hero -->
+<section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5">
+    <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
+        <h1
+        class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
+        The Clever Place to Keep Your Cache
+
+        </h1> 
+
+        <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-grey-900 ">
+            Cache Bank is designed exclusively for software developers. We understand finacial needs are as unique your cash.
+        </p>
+
+        <div class="flex flex-col items-center gap-4 lg:flex-row">
+            <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">Join Cache Now</button>
+            <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500"> Join Our Discord Server</button>
+        </div>
+    </div>
+    
+    <div class="items-center justify-end hidden col-span-1 md:flex">
+        <img class="w-4/5 rounded-md" src="https://loopple.s3.eu-west-3.amazonaws.com/images/K2RRaBAGcPx1Qaa9EimfM0bQpbDoxxRHGlpXAFIh.png" alt="header image"></img>
+
+
+    </div>
+
+</section>
+
+
+<!--ENDORSEMENTS-->
+<section class="w-full">
+   <div class="container flex flex-col items-center gap-8 mx-auto my-40">
+      <p class="text-center text-dark-grey-600 font-semibold mb-10 text-2xl">
+        Endorsed by global companies like
+      </p>
+      <div class="flex flex-wrap items-center justify-center w-full gap-6 lg:gap-0 lg:flex-nowrap lg:justify-between">
+        <span>
+            
+        </span>
+
+      </div>
+
+   </div> 
+</section>
+
+
+
+
+
+
+
+
 <script>
-    document.getElementById('mobile-menu-toggle').addEventListener("click", function() {.getElementById('mobile-menu')});
-</script>
+    document
+    .getElementById('mobile-menu-toggle')
+    .addEventListener("click", function() {
+        document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+        </script>
 <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
