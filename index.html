@@ -1,141 +1,99 @@
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Cache Bank Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
-    <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
-    <link rel="stylesheet" href="./assets/css/theme.css">
-    <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
-</head>
-
- <body class="bg-gray-100">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Cache Bank Landing Page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/css/leaflet.css">
+        <link rel="stylesheet" href="./assets/css/tailwind/tailwind.min.css">
+        <link rel="stylesheet" href="./assets/css/theme.css">
+        <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+    </head>
+    
+<body class="bg-gray-100">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div 
-        class="relative flex flex-wrap items-center justify-between w-full bg-white py-7 shrink-0">
-            <div>
-                <img class="h-8"
-                src="https://loopple.s3.eu-west-3.amazonaws.com/images/6wjH3M3DDKVZrZYDViFptLEOoeHnZxEgC3lorweP.png" alt="logo">
-            </div>
-            <div class="hidden md:flex items-center justify-between gap-12 text-black">
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Products</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Features</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Get Started</a>
-                <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Contact</a>
-            </div>
-            <div class="hidden md:flex items-center gap-8">
-                <button class="text-sm font-normal text-dark-gray-800 hover:text-dark-gray-900">Log In</button>
-                <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
-            </div>
-            <button class="md:hidden p-4" id="mobile-menu-toggle">.
-                <svg 
-                width="10px" 
-                height="10px" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                class="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_429_11066)">
-                        <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" 
-                        stroke="#292929" stroke-width="2.5" 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round"/>
-                    </g>
-                    <defs>
-                        <clipPath 
-                        id="clip0_429_11066"
-                        >
-                            <rect 
-                            width="24" 
-                            height="24" 
-                            fill="white" 
-                            transform="translate(0 0.000915527)"
-                            />
-                        </clipPath>
-                    </defs>
-                </svg>
-            </button>
-            <div 
-            class="absolute flex md:hidden flex-col items-start shadow-main justify center w-full gap-3 overflow-hidden bg-white max-h-screen top-full"
-            id="mobile-menu"
-            >
-                <a 
-                href="javascript:void(0)" 
-                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >Products</a>
-                <a 
-                href="javascript:void(0)" 
-                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
-                Features
-            </a>
-                <a 
-                href="javascript:void(0)" 
-                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
-                Get Started
-            </a>
-                <a 
-                href="javascript:void(0)" 
-                class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900" >
-                Contact
-            </a>
-                <button 
-                class="flex items-center px-4 py-2 text-sm font-normal text-black">
-                Log In
-            </button>
-                <button 
-                class="flex items-center px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">
-                Sign Up
-            </button>
+        <div class="relative flex flex-wrap items-center justify-between w-full bg-white py-7 shrink-0">
+            <div class="px-4" >
+                <img class="h-8" 
+                    src="https://loopple.s3.eu-west-3.amazonaws.com/images/6wjH3M3DDKVZrZYDViFptLEOoeHnZxEgC3lorweP.png" alt="logo">
             </div>
 
+        <div class="md:flex items-center justify-between gap-12 text-black">
+                <a 
+                    href="javascript:void(0)" 
+                    class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Products</a>
+                <a 
+                    href="javascript:void(0)" 
+                    class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Features</a>
+                <a 
+                    href="javascript:void(0)" 
+                    class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Get Started</a>
+                <a 
+                    href="javascript:void(0)" 
+                    class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Contact</a>
+            </div>
+
+                <div class="md:flex items-center gap-8">
+                    <button class="text-sm font-normal text-dark-gray-800 hover:text-dark-gray-900">Log In</button>
+                    <button class="px-4 py-2 text-sm font-bold text-blue-950 bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+                </div>
+                <button class="md:hidden p-4" id="mobile-menu-toggle">
+                    <svg 
+                    width="10px" 
+                    height="10px" 
+                    viewBox="0 0 24 24" 
+                    fill="none" class="h-6 w-6" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_429_11066)">
+                            <path d="M3 6.00092H21M3 12.0009H21M3 18.0009H21" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_429_11066">
+                                <rect width="24" height="24" fill="white" transform="translate(0 0.000915527)"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <div class="absolute flex md:hidden flex-col items-start shadow-main justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full" id="mobile-menu">
+                    <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Products</a>
+                    <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Features</a>
+                    <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Get Started</a>
+                    <a href="javascript:void(0)" class="text-sm font-normal text-dark-grey-700 hover:text-dark-gray-900">Contact</a>
+                    <button class="flex items-center px-4 py-2 text-sm font-normal text-black">Log In</button>
+                    <button class="flex items-center px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
+                </div>
+            </div>
+            <div class="w-full"></div>
+            <div class="container mx-auto"></div>
+            <div class="w-full"></div>
+            <div class="w-full"></div>
         </div>
-
-        <div 
-        class="w-full">
-        </div>
-        <div class="container mx-auto">
-        </div>
-        <div class="w-full">
-        </div>
-        <div class="w-full">
-        </div>
-    </div>
-
-</div>
-
-<div class="w-full bg-green-500">
-<!-- Full-width footer container with green background -->
-</div>
-
-<!-- Component 2: Hero and Endorsements -->
-<!-- Hero -->
-<section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5">
-    <div class="flex flex-col justify-center col-span-1 text-center lg:text-start">
-        <h1
-        class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
-        Elevate Your Banking with Cache
-
-        </h1> 
-
-        <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-grey-900 ">
-            We merge cutting-edge banking with a deep understanding of software developers needs.Expireince tailored solutions, advanced security, and tech-focuced support designed just for you.
-        </p>
-
-        <div class="flex flex-col items-center gap-4 lg:flex-row">
-            <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">Join Cache Now</button>
-            <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500"> Join Our Discord Server</button>
-        </div>
+    </body>
+    
+    <div class="w-full bg-green-500">
+        <!-- Full-width footer container with green background -->
     </div>
     
-    <div class="items-center justify-end hidden col-span-1 md:flex">
-        <img class="w-4/5 rounded-md" src="https://loopple.s3.eu-west-3.amazonaws.com/images/K2RRaBAGcPx1Qaa9EimfM0bQpbDoxxRHGlpXAFIh.png" alt="header image"></img>
-
-
-    </div>
-
-</section>
+    <!-- Component 2: Hero and Endorsements -->
+    <!-- Hero -->
+    <section class="grid w-full grid-cols-1 my-auto mt-12 mb-8 md:grid-cols-2 xl:gap-14 md:gap-5">
+        <div class="container flex flex-col justify-center col-span-1 text-center lg:text-start">
+            <h1 class="mb-8 text-4xl font-extrabold leading-tight lg:text-6xl text-dark-grey-900">
+                Elevate Your Banking with Cache
+            </h1> 
+            <p class="mb-6 text-base font-normal leading-7 lg:w-3/4 text-grey-900 ">
+                We merge cutting-edge banking with a deep understanding of software developers needs.Expireince tailored solutions, advanced security, and tech-focuced support designed just for you.
+            </p>
+            <div class="flex flex-col items-center gap-4 lg:flex-row">
+                <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500">Join Cache Now</button>
+                <button class="flex items-center py-4 text-sm font-bold text-white px-7 focus:ring-4 focus:ring-purple-blue-100 transition duration-300 rounded-xl bg-green-500 hover:bg-pink-500"> Join Our Discord Server</button>
+            </div>
+        </div>
+        <div class="items-center justify-end hidden col-span-1 md:flex">
+            <img class="w-4/5 rounded-md" src="https://loopple.s3.eu-west-3.amazonaws.com/images/K2RRaBAGcPx1Qaa9EimfM0bQpbDoxxRHGlpXAFIh.png" alt="header image"></img>
+        </div>
+    </section>
 
 
 <!--ENDORSEMENTS-->
@@ -221,7 +179,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10  mt-20">
         <!-- CARD 1 -->
         <div class="flex flex-col items-center gap-6 px-6 py-5 rounded-3xl shadow-main hover:bg-green-500 transition duration-300">
-            <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500">
+            <div class="flex items-center justify-center w-16 h-16 rounded-2xl bg-green-500 group-hover:bg-pink-500">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                     <path d="M22.8233 8C22.8233 7.28 22.4533 6.65 21.8833 6.3L12.8333 1L3.78331 6.3C3.21331 6.65 2.83331 7.28 2.83331 8V18C2.83331 19.1 3.73331 20 4.83331 20H20.8333C21.9333 20 22.8333 19.1 22.8333 18L22.8233 8ZM20.8233 8V8.01L12.8333 13L4.83331 8L12.8333 3.32L20.8233 8ZM4.83331 18V10.34L12.8333 15.36L20.8233 10.37L20.8333 18H4.83331Z" fill="white"/>
                 </svg>             
@@ -364,51 +322,52 @@
 </div>
 
 <!-- Getting Started -->
+
 <div class="w-full">
-    <div class="container flex flex-col items-center gap-16 mx-auto my-32">
-        <div class="grid w-full grid-cols-1 gap-32 lg:grid-cols-2">
-            <div class="bg-cover bg-center hidden lg:block rounded-4xl" style="background-image: url('assets/component-4/getting-started.png');">
+    <div class="container flex flex-col items-center gap-16 mx-auto my-32 ">
+        <!-- This div element represents a grid layout with one column in mobile view and two columns in larger screens. -->
+        <div class="grid w-full grid-cols-1 lg:grid-cols-2 gap-32">
+            <div class="bg-cover bg-center hidden lg:block rounded-3xl" style="background-image: url('./assets/component-4/getting-started.png');">
             </div>
             <div class="flex flex-col gap-16">
-                <h2 class="text-3xl font-extrabold md:text-4xl lg:text-5xl text-dark-grey-900">
-                    How Cache Works?
-                </h2>
-                <p class="text-base font-medium leading-7 text-dark-grey-600"><span style="color:rgb(55, 65, 81)"; font-family:system-ui>Cache Bank simplifies sign-up with a user-friendly website, streamlined account options, and an efficient verification process, making banking accessible and hassle-free for developers</span>           
-            </div>
-            <div class="grid w-full grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10">
-                <div class="flex flex-col items-start gap-1">
-                    <div class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-green-500">
-                        <span class="text-base font-bold leading-7 text-white">1</span>
-                    </div>
+               <div>
+                <h2 class="text-3xl font-extrabold md:text-3xl lg:text-5xl text-dark-grey-900">How Cache Works?</h2>
+                <p class="text-base font-medium leading-7 text-dark-grey-600"><span style="color:rgb(55, 65, 81); font-family: Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;"  >Cache Bank simplifies sign-up with a user-friendly website, streamlined account options, and an efficient verification process, making banking accessible and hassle-free for developers</span>  
+                </div>
+                <div class="grid w-full grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-10">
+                             <div class="flex flex-col items-start gap-1">
+                                 <div class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-green-500">
+                                    <span class="text-base font-bold leading-7 text-white">1</span>
+                                </div>
                     <h3 class="text-base font-bold leading-tight text-dark-grey-900"><span style="border-color: rgb(217, 217, 227)"; border-image: initial; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-tranlate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1;--tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ;  >Visit Cache Bank-Website</span></h3>
-                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: S>Visit the Cache Bank website and click on the "Open an Account" button</span></p>
+                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif>Go to cache bank, click "sign up" or "Open an account".</span></p>
                 </div>
                 <div class="flex flex-col items-start gap-1">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-pink-500">
                         <span class="text-base font-bold leading-7 text-white">2</span>
                     </div>
                     <h3 class="text-base font-bold leading-tight text-dark-grey-900"><span style="border-color: rgb(217, 217, 227)"; border-image: initial; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-tranlate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1;--tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ;  >Choose Account Type</span></h3>
-                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: S>Select from checking, savings, or developer-specific accounts</span></p>
+                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif>Select from checking, savings, or developer-specific accounts</span></p>
                 </div>
                 <div class="flex flex-col items-start gap-1">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-pink-500">
                         <span class="text-base font-bold leading-7 text-white">3</span>
                     </div>
                     <h3 class="text-base font-bold leading-tight text-dark-grey-900"><span style="border-color: rgb(217, 217, 227)"; border-image: initial; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-tranlate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1;--tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: --tw-ordinal ; --tw-slashed-zero ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ;--tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color rgba(69,89,164,.5); >Provide Personal Information</span></h3>
-                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: S>Complete the form with your details and identification for security</span></p>
+                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif>Complete the form with your details and identification for security</span></p>
                 </div>
                 <div class="flex flex-col items-start gap-1">
                     <div class="flex items-center justify-center w-12 h-12 rounded-full mb-2 bg-green-500">
                         <span class="text-base font-bold leading-7 text-white">4</span>
                     </div>
                     <h3 class="text-base font-bold leading-tight text-dark-grey-900"><span style="border-color: rgb(217, 217, 227)"; border-image: initial; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-tranlate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1;--tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ;  >Verify and Submit</span></h3>
-                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: S>Check your information, agree to terms, and submit for account approval</span></p>
+                    <p class="text-base font-medium leading-7 text-dark-grey-600"><span style ="color: rgb (55, 65, 81)"; font-family: Söhne, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif>Check your information, agree to terms, and submit for account approval</span></p>
                 </div>
-
             </div>
-
         </div>
     </div>
+  </div>
+</div>
 <!-- Component 5: Contact and Footer -->
 <!-- Contact -->
 <div class="w-full">
@@ -447,13 +406,13 @@
                         <path d="M31.7091 15.2475C31.4927 12.9341 30.6966 10.7177 29.3984 8.81412C28.1003 6.91054 26.3443 5.38464 24.3014 4.38503C22.2585 3.38541 19.9984 2.94614 17.7412 3.10998C15.4839 3.27383 13.3065 4.03522 11.4208 5.32C9.8008 6.43252 8.44083 7.89972 7.43858 9.6162C6.43633 11.3327 5.81667 13.2558 5.62413 15.2475C5.43524 17.2261 5.67758 19.2231 6.33355 21.0936C6.98953 22.9641 8.04269 24.6611 9.41663 26.0617L17.5875 34.4692C17.7308 34.6176 17.9013 34.7354 18.0892 34.8157C18.277 34.8961 18.4785 34.9375 18.682 34.9375C18.8856 34.9375 19.0871 34.8961 19.2749 34.8157C19.4628 34.7354 19.6333 34.6176 19.7766 34.4692L27.9166 26.0617C29.2906 24.6611 30.3437 22.9641 30.9997 21.0936C31.6557 19.2231 31.898 17.2261 31.7091 15.2475ZM25.7583 23.8292L18.6666 31.1125L11.575 23.8292C10.5298 22.7557 9.72928 21.4578 9.23081 20.0288C8.73233 18.5997 8.54834 17.075 8.69204 15.5642C8.83668 14.0301 9.31143 12.5482 10.082 11.2256C10.8525 9.90299 11.8996 8.77278 13.1475 7.91666C14.7831 6.80079 16.703 6.20555 18.6666 6.20555C20.6302 6.20555 22.5502 6.80079 24.1858 7.91666C25.4299 8.76947 26.4747 9.89469 27.245 11.2115C28.0154 12.5283 28.4922 14.0039 28.6412 15.5325C28.7896 17.0484 28.6079 18.5793 28.1093 20.0142C27.6107 21.4491 26.8076 22.7522 25.7583 23.8292ZM18.6666 9.5C17.2945 9.5 15.9532 9.91787 14.8124 10.7008C13.6715 11.4837 12.7823 12.5965 12.2572 13.8984C11.7321 15.2003 11.5947 16.6329 11.8624 18.015C12.1301 19.3971 12.7908 20.6667 13.7611 21.6631C14.7313 22.6596 15.9674 23.3382 17.3132 23.6131C18.6589 23.888 20.0538 23.7469 21.3215 23.2076C22.5892 22.6684 23.6726 21.7551 24.4349 20.5834C25.1972 19.4117 25.6041 18.0342 25.6041 16.625C25.6001 14.7366 24.8678 12.9268 23.5677 11.5915C22.2675 10.2562 20.5053 9.50418 18.6666 9.5ZM18.6666 20.5833C17.9043 20.5833 17.1592 20.3512 16.5254 19.9162C15.8916 19.4813 15.3976 18.8631 15.1058 18.1398C14.8141 17.4165 14.7378 16.6206 14.8865 15.8528C15.0352 15.0849 15.4023 14.3796 15.9413 13.826C16.4803 13.2724 17.1671 12.8955 17.9147 12.7427C18.6623 12.59 19.4373 12.6684 20.1416 12.968C20.8458 13.2676 21.4477 13.7749 21.8712 14.4259C22.2947 15.0768 22.5208 15.8421 22.5208 16.625C22.5208 17.6748 22.1147 18.6816 21.3919 19.424C20.6691 20.1663 19.6888 20.5833 18.6666 20.5833Z" fill="#22c55e"/>
                     </svg>                           
                 </span>
-                <p class="text-2xl font-extrabold text-dark-grey-900">Location</p>
-                <p class="text-base font-medium text-dark-grey-600">Find us at our office</p>
-                <a class="text-lg font-bold text-green-500" target="_blank" href="https://goo.gl/maps/QcWzYETAh4FS3KTD7">15 Tech Alley, Cape Town</a>
+                    <p class="text-2xl font-extrabold text-dark-grey-900">Location</p>
+                    <p class="text-base font-medium text-dark-grey-600">Find us at our office</p>
+                    <a class="text-lg font-bold text-green-500" target="_blank" href="https://goo.gl/maps/QcWzYETAh4FS3KTD7">15 Tech Alley, Cape Town</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Footer -->
@@ -528,14 +487,14 @@
 
 
 
-<script>
-    document
-    .getElementById('mobile-menu-toggle')
-    .addEventListener("click", function() {
-        document.getElementById("mobile-menu").classList.toggle("hidden");
-    });
+             <script>
+            document
+            .getElementById('mobile-menu-toggle')
+            .addEventListener("click", function() {
+            document.getElementById("mobile-menu").classList.toggle("hidden");
+            });
         </script>
-<script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/maps.js"></script>
