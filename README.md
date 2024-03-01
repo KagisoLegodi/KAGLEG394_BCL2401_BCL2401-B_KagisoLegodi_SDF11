@@ -31,5 +31,5 @@ The CacheBank website is built using the following technologies:
 
 ## Additional Resources
 
-- **Loom Video Walkthrough**: [Link to Loom Video](https://www.loom.com)
+- **Loom Video Walkthrough**: [Link to Loom Video](https://www.loom.com/share/14eb3ff6b66147578009852326f5f960?sid=4bc2dd07-2b41-4b06-a807-575b82183cc4)
 - **Google Slide Presentation**: [Link to Google Slides](https://docs.google.com/presentation/d/1Yb_jl32bK1v_dlbbjKMLvaNeBBYxy6jxmOBFxqXtBZk/edit?usp=sharing)
